@@ -40,6 +40,7 @@ inquirer.prompt([
 	});
 
 function liriActions(action, inputVal){
+	logData(action+" "+inputVal);
 	if (action === "my-tweets") {
 		//will show last 20 tweets
 		console.log("twitter");
@@ -58,6 +59,7 @@ function liriActions(action, inputVal){
 					message: "What song would you like information for?"
 				  }
 				]).then(function(reply) {
+					logData(reply);
 					console.log(reply.song);
 					if(reply.song){
 						songTitle = reply.song;
@@ -84,6 +86,7 @@ function liriActions(action, inputVal){
 					message: "What movie would you like information on?"
 				}
 				]).then(function(reply) {
+					logData(reply);
 					console.log(reply.movie);
 					if(reply.movie){
 						var movieTitle = reply.movie;
@@ -107,9 +110,8 @@ function liriActions(action, inputVal){
 function getTweets(){
 	var params = {screen_name: 'nodejs'};
 	client.get('statuses/user_timeline', 'user_id=wisejd02', function(err, tweets, response) {
+		
 		if (!err) {
-			//console.log(tweets[0].text);
-			// console.log(tweets.length);
 			var uLimit;
 			if (tweets.length>20){
 				uLimit = 20;
@@ -118,10 +120,15 @@ function getTweets(){
 			}
 						
 			for(var i = 0; i <uLimit; i++){
-				console.log(tweets[i].text);
+				var tweet = tweets[i].text;
+				var tweetTime = tweets[i].created_at;
+				var results = `Tweet :${tweet}\n Time: ${tweetTime}`;
+				logData(results);
+				console.log(results);
 			}
 					
 		}else{
+			logData(err);
 			console.log(err);
 		}
 	});
@@ -130,19 +137,20 @@ function getTweets(){
 function searchSpotify(songTitle){
 	spotify.search({ type: 'track', query: songTitle }, function(err, data) {
 		if (err) {
-		  return console.log('Error occurred: ' + err);
+			logData(err);
+			return console.log('Error occurred: ' + err);
 		}
-			//console.log(data.tracks.items[0]);
 			var artists= data.tracks.items[0].album.artists[0].name;
 			var albumn = data.tracks.items[0].album.name;
 			var title = data.tracks.items[0].name;
 			var link = data.tracks.items[0].external_urls.spotify;
-			console.log(`Artist(s): ${artists}\n 
-				Albumn: ${albumn}\n
-				Title: ${title}\n
-				Link: ${link}
-			`)
-	  
+			var results = `Artist(s): ${artists}\n 
+			Albumn: ${albumn}\n
+			Title: ${title}\n
+			Link: ${link}
+			`;
+			logData(results);
+			console.log(results);
 	  });
 }
 
@@ -150,6 +158,7 @@ function searchOMDB(movieTitle){
 	var queryURL = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=40e9cece";
 	request(queryURL, function (err, response, body) {
 		if (err) {
+			logData(err);
 			return console.log('Error occurred: ' + err);
 		}else{
 			//console.log(body);
@@ -162,7 +171,7 @@ function searchOMDB(movieTitle){
 			var lang = body.Language;
 			var plot = body.Plot;
 			var actors = body.Actors
-			console.log(`Title: ${title}\n
+			var results = `Title: ${title}\n
 			Year: ${year}\n
 			IMDB Rating: ${imdbRating}\n
 			Rotten Tomato Rating: ${rotTomRating}\n
@@ -170,7 +179,9 @@ function searchOMDB(movieTitle){
 			Language: ${lang}\n
 			Plot: ${plot}\n
 			Actors: ${actors}
-			`)
+			`;
+			logData(results);
+			console.log(results);
 
 		}
 
@@ -181,11 +192,15 @@ function searchOMDB(movieTitle){
 function itSays(txtFile){
 	fs.readFile(txtFile,'utf8', (err, data) => {
 		if (err) throw err;
-		//console.log(data);
 		var ranAction = data.split(",");
 		ranAction[1]=ranAction[1].trim();
-		console.log(ranAction);
 		liriActions(ranAction[0], ranAction[1]);
 	  });
 }
-	
+
+function logData(apndTxt){
+	fs.appendFile('log.txt', apndTxt+"\n", (err) => {
+		if (err) throw err;
+		//console.log(`The ${apndTxt} was appended to file!`);
+	  });
+}
