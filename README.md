@@ -7,19 +7,23 @@ This will show:
 *last 20 tweets and when they were created at in your terminal/bash window.
 
 
-spotify-this-song '<song name here>'
+spotify-this-song
+
+Will follow with a prompt that will ask you for song title to get info for.
 
 This will show the following information about the song in your terminal/bash window
 
-*Artist(s)
-*The song's name
-*A preview link of the song from Spotify
-*The album that the song is from
+  * Artist(s)
+  * The song's name
+  * A preview link of the song from Spotify
+  * The album that the song is from
 
 If no song is provided then your program will default to "We Will Rock You" by Queen.
 
 
-movie-this '<movie name here>'
+movie-this
+
+Will follow with a prompt to ask you for movie title to get info for.
 
 This will output the following information to your terminal/bash window:
 
@@ -36,3 +40,5 @@ If the user doesn't type a movie in, the program will output data for the movie 
 do-what-it-says
 
 Performs liri actions dictated in random.txt file
+
+--data can be found in log.txt file
