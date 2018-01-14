@@ -19,11 +19,6 @@ var client = new Twitter({
 	access_token_secret: dotenv.parsed.TWITTER_ACCESS_TOKEN_SECRET
   });
 
-//console.log(dotenv);
-//console.log(dotenv.parsed.SPOTIFY_ID);
-//var spotify = new Spotify(keys.spotify);
-//var client = new Twitter(keys.twitter);
-
 
 inquirer.prompt([
 	{
@@ -47,8 +42,7 @@ function liriActions(action, inputVal){
 		getTweets();
 	}else if(action === "spotify-this-song"){
 		//show information artist, song name, preview link, albumn song appeared in
-		//if no song is provided chose default song ??utilize node-spotify-api to retrieve song info from spotify api
-		//api info for spotify :
+		//if no song is provided chose default song 
 		console.log('spotify');
 		var songTitle;
 		if(!inputVal){
@@ -94,6 +88,7 @@ function liriActions(action, inputVal){
 					}else{
 						var watchThis = `If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
 						\nIt's on Netflix!`
+						logData(watchThis);
 						console.log(watchThis);
 						return;
 					}
@@ -161,7 +156,6 @@ function searchOMDB(movieTitle){
 			logData(err);
 			return console.log('Error occurred: ' + err);
 		}else{
-			//console.log(body);
 			body = JSON.parse(body);
 			var title = body.Title;
 			var year = body.Year;
