@@ -144,9 +144,9 @@ function searchSpotify(songTitle){
 			var albumn = data.tracks.items[0].album.name;
 			var title = data.tracks.items[0].name;
 			var link = data.tracks.items[0].external_urls.spotify;
-			var results = `Artist(s): ${artists}\n 
-			Albumn: ${albumn}\n
-			Title: ${title}\n
+			var results = `Artist(s): ${artists}
+			Albumn: ${albumn}
+			Title: ${title}
 			Link: ${link}
 			`;
 			logData(results);
@@ -171,13 +171,13 @@ function searchOMDB(movieTitle){
 			var lang = body.Language;
 			var plot = body.Plot;
 			var actors = body.Actors
-			var results = `Title: ${title}\n
-			Year: ${year}\n
-			IMDB Rating: ${imdbRating}\n
-			Rotten Tomato Rating: ${rotTomRating}\n
-			Producers: ${production}\n
-			Language: ${lang}\n
-			Plot: ${plot}\n
+			var results = `Title: ${title}
+			Year: ${year}
+			IMDB Rating: ${imdbRating}
+			Rotten Tomato Rating: ${rotTomRating}
+			Producers: ${production}
+			Language: ${lang}
+			Plot: ${plot}
 			Actors: ${actors}
 			`;
 			logData(results);
