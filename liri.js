@@ -86,7 +86,8 @@ function liriActions(action, inputVal){
 						var movieTitle = reply.movie;
 						searchOMDB(movieTitle);
 					}else{
-						var watchThis = `If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
+						var watchThis = `
+						If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
 						\nIt's on Netflix!`
 						logData(watchThis);
 						console.log(watchThis);
@@ -139,7 +140,8 @@ function searchSpotify(songTitle){
 			var albumn = data.tracks.items[0].album.name;
 			var title = data.tracks.items[0].name;
 			var link = data.tracks.items[0].external_urls.spotify;
-			var results = `Artist(s): ${artists}
+			var results = `
+			Artist(s): ${artists}
 			Albumn: ${albumn}
 			Title: ${title}
 			Link: ${link}
@@ -165,7 +167,8 @@ function searchOMDB(movieTitle){
 			var lang = body.Language;
 			var plot = body.Plot;
 			var actors = body.Actors
-			var results = `Title: ${title}
+			var results = `
+			Title: ${title}
 			Year: ${year}
 			IMDB Rating: ${imdbRating}
 			Rotten Tomato Rating: ${rotTomRating}
