@@ -1,0 +1,113 @@
+my-tweets false
+my-tweets false
+Tweet :Waiting for some crazy tweet!!
+ Time: Sat Jan 13 21:13:55 +0000 2018
+Tweet :who is this and why are you here?
+ Time: Sat Jan 13 21:13:11 +0000 2018
+Tweet :Is this happening?
+ Time: Sat Jan 13 21:12:42 +0000 2018
+spotify-this-song false
+[object Object]
+Artist(s): Queen
+ 
+			Albumn: News Of The World (Deluxe Remastered Version)
+
+			Title: We Will Rock You - Remastered 2011
+
+			Link: https://open.spotify.com/track/54flyrjcdnQdco7300avMJ
+			
+movie-this false
+[object Object]
+Title: Die Hard
+
+			Year: 1988
+
+			IMDB Rating: 8.2/10
+
+			Rotten Tomato Rating: 92%
+
+			Producers: 20th Century Fox
+
+			Language: English, German, Italian
+
+			Plot: John McClane, officer of the NYPD, tries to save his wife Holly Gennaro and several others that were taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.
+
+			Actors: Bruce Willis, Bonnie Bedelia, Reginald VelJohnson, Paul Gleason
+			
+movie-this false
+[object Object]
+Title: The Lion King
+			Year: 1994
+			IMDB Rating: 8.5/10
+			Rotten Tomato Rating: 92%
+			Producers: Buena Vista
+			Language: English, Swahili, Xhosa, Zulu
+			Plot: Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble.
+			Actors: Rowan Atkinson, Matthew Broderick, Niketa Calame, Jim Cummings
+			
+my-tweets false
+Tweet :I do not have 20 tweets but I made the code pickup max tweets  of 20
+ Time: Sun Jan 14 06:09:52 +0000 2018
+Tweet :Waiting for some crazy tweet!!
+ Time: Sat Jan 13 21:13:55 +0000 2018
+Tweet :who is this and why are you here?
+ Time: Sat Jan 13 21:13:11 +0000 2018
+Tweet :Is this happening?
+ Time: Sat Jan 13 21:12:42 +0000 2018
+do-what-it-says false
+spotify-this-song I Want it That Way
+Artist(s): Backstreet Boys
+			Albumn: The Hits--Chapter One
+			Title: I Want It That Way
+			Link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+			
+movie-this false
+[object Object]
+movie-this false
+[object Object]
+Title: The Lion King
+			Year: 1994
+			IMDB Rating: 8.5/10
+			Rotten Tomato Rating: 92%
+			Producers: Buena Vista
+			Language: English, Swahili, Xhosa, Zulu
+			Plot: Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble.
+			Actors: Rowan Atkinson, Matthew Broderick, Niketa Calame, Jim Cummings
+			
+movie-this false
+[object Object]
+Title: Insidious
+			Year: 2010
+			IMDB Rating: 6.8/10
+			Rotten Tomato Rating: 66%
+			Producers: FilmDistrict
+			Language: English
+			Plot: A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.
+			Actors: Patrick Wilson, Rose Byrne, Ty Simpkins, Lin Shaye
+			
+movie-this false
+[object Object]
+
+						If you haven't watched "Mr. Nobody," then you should: http://www.imdb.com/title/tt0485947/
+						
+It's on Netflix!
+spotify-this-song false
+[object Object]
+
+			Artist(s): Queen
+			Albumn: News Of The World (Deluxe Remastered Version)
+			Title: We Will Rock You - Remastered 2011
+			Link: https://open.spotify.com/track/54flyrjcdnQdco7300avMJ
+			
+movie-this false
+[object Object]
+
+			Title: The Matrix
+			Year: 1999
+			IMDB Rating: 8.7/10
+			Rotten Tomato Rating: 87%
+			Producers: Warner Bros. Pictures
+			Language: English
+			Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+			Actors: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+			
