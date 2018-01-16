@@ -43,15 +43,19 @@ Performs liri actions dictated in random.txt file
 
 --data can be found in log.txt file\n
 
---.env file with following info would need to be added for ful liri functionality:\n
-	# Spotify API keys
+--.env file with following info would need to be added for ful liri functionality:
+# Spotify API keys
 
-SPOTIFY_ID=your-spotify-id\n
-SPOTIFY_SECRET=your-spotify-secret\n
+SPOTIFY_ID=your-spotify-id
+
+SPOTIFY_SECRET=your-spotify-secret
 
 # Twitter API keys
 
-TWITTER_CONSUMER_KEY=your-twitter-consumer-key\n
-TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret\n
-TWITTER_ACCESS_TOKEN_KEY=your-access-token-key\n
-TWITTER_ACCESS_TOKEN_SECRET=your-twitter-access-token-secret\n
+TWITTER_CONSUMER_KEY=your-twitter-consumer-key
+
+TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret
+
+TWITTER_ACCESS_TOKEN_KEY=your-access-token-key
+
+TWITTER_ACCESS_TOKEN_SECRET=your-twitter-access-token-secret
